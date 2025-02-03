@@ -43,13 +43,13 @@ clear         # Clear terminal screen (or Ctrl+L)
 
 ### Basic File Commands
 ```bash
-touch file.txt          # Create empty file
-mkdir directory         # Create directory
-mkdir -p dir1/dir2     # Create nested directories
-rm file.txt            # Remove file
-rm -r directory        # Remove directory and contents
-rm -rf directory       # Force remove directory (be careful!)
-cp file1 file2         # Copy file
+touch file.txt        # Create empty file
+mkdir directory       # Create directory
+mkdir -p dir1/dir2    # Create nested directories
+rm file.txt           # Remove file
+rm -r directory       # Remove directory and contents
+rm -rf directory      # Force remove directory (be careful!)
+cp file1 file2        # Copy file
 cp -r dir1 dir2       # Copy directory
 mv file1 file2        # Move/rename file
 mv dir1 dir2          # Move/rename directory
@@ -57,7 +57,7 @@ mv dir1 dir2          # Move/rename directory
 
 ### File Viewing
 ```bash
-cat file.txt           # Display file contents
+cat file.txt          # Display file contents
 less file.txt         # View file with pagination
 head file.txt         # Show first 10 lines
 tail file.txt         # Show last 10 lines
@@ -72,15 +72,15 @@ find . -name "*.txt"   # Find files by name
 grep "text" file.txt   # Search for text in file
 grep -r "text" .       # Search recursively in current directory
 locate filename        # Find file in database
-which command         # Show path of command
+which command          # Show path of command
 ```
 
 ## System Information
 
 ### System Commands
 ```bash
-uname -a              # All system information
-hostname              # System hostname
+uname -a             # All system information
+hostname             # System hostname
 df -h                # Disk space usage
 du -sh directory     # Directory size
 free -h              # Memory usage
@@ -95,10 +95,10 @@ whoami               # Current user
 
 ### APT (Debian/Ubuntu/Raspberry Pi OS)
 ```bash
-apt update                    # Update package list
-apt upgrade                   # Upgrade all packages
-apt install package           # Install package
-apt remove package            # Remove package
+apt update                   # Update package list
+apt upgrade                  # Upgrade all packages
+apt install package          # Install package
+apt remove package           # Remove package
 apt autoremove               # Remove unused packages
 apt search keyword           # Search for package
 apt list --installed         # List installed packages
@@ -108,7 +108,7 @@ apt list --installed         # List installed packages
 
 ### Process Commands
 ```bash
-ps                    # Show running processes
+ps                   # Show running processes
 ps aux               # Show all processes
 kill pid             # Kill process by ID
 killall process      # Kill process by name
@@ -124,8 +124,8 @@ Ctrl+Z               # Suspend current process
 
 ### User Commands
 ```bash
-sudo command         # Run command as root
-su username          # Switch user
+sudo command        # Run command as root
+su username         # Switch user
 passwd              # Change password
 adduser username    # Add new user
 deluser username    # Delete user
@@ -158,14 +158,14 @@ Common combinations:
 
 ### Network Commands
 ```bash
-ifconfig            # Network interfaces
-ip addr             # IP addresses (modern)
-ping host          # Test connectivity
-netstat -tulpn     # Show active ports
-ssh user@host      # SSH connection
-scp file user@host:path  # Secure copy
-wget url           # Download file
-curl url           # Transfer data
+ifconfig                  # Network interfaces
+ip addr                   # IP addresses (modern)
+ping host                 # Test connectivity
+netstat -tulpn            # Show active ports
+ssh user@host             # SSH connection
+scp file user@host:path   # Secure copy
+wget url                  # Download file
+curl url                  # Transfer data
 ```
 
 ### WiFi (Raspberry Pi)
@@ -179,55 +179,55 @@ raspi-config       # Configure WiFi (GUI)
 
 ### Nano Editor
 ```bash
-Ctrl+O             # Save file
-Ctrl+X             # Exit
-Ctrl+K             # Cut line
-Ctrl+U             # Paste line
-Ctrl+W             # Search
+Ctrl+O       # Save file
+Ctrl+X       # Exit
+Ctrl+K       # Cut line
+Ctrl+U       # Paste line
+Ctrl+W       # Search
 ```
 
 ### Vim Editor
 ```bash
-i                  # Enter insert mode
-Esc                # Exit insert mode
-:w                 # Save
-:q                # Quit
-:wq                # Save and quit
-:q!               # Quit without saving
+i            # Enter insert mode
+Esc          # Exit insert mode
+:w           # Save
+:q           # Quit
+:wq          # Save and quit
+:q!          # Quit without saving
 ```
 
 ## System Control
 
 ### System Commands
 ```bash
-shutdown -h now    # Shutdown immediately
-shutdown -r now    # Restart immediately
-reboot            # Restart
-systemctl start service   # Start service
-systemctl stop service    # Stop service
-systemctl status service  # Check service status
-systemctl enable service  # Enable at boot
-systemctl disable service # Disable at boot
+shutdown -h now             # Shutdown immediately
+shutdown -r now             # Restart immediately
+reboot                      # Restart
+systemctl start service     # Start service
+systemctl stop service      # Stop service
+systemctl status service    # Check service status
+systemctl enable service    # Enable at boot
+systemctl disable service   # Disable at boot
 ```
 
 ## Raspberry Pi Specific
 
 ### Raspberry Pi Commands
 ```bash
-raspi-config       # Raspberry Pi configuration tool
-vcgencmd measure_temp     # CPU temperature
-vcgencmd get_mem arm     # ARM memory split
-vcgencmd get_mem gpu     # GPU memory split
-gpio readall      # Read all GPIO pins
-pinout            # Show GPIO pinout
+raspi-config            # Raspberry Pi configuration tool
+vcgencmd measure_temp   # CPU temperature
+vcgencmd get_mem arm    # ARM memory split
+vcgencmd get_mem gpu    # GPU memory split
+gpio readall            # Read all GPIO pins
+pinout                  # Show GPIO pinout
 ```
 
 ### GPIO Control
 ```bash
-gpio -g mode pin out     # Set pin as output
-gpio -g write pin 1      # Set pin HIGH
-gpio -g write pin 0      # Set pin LOW
-gpio -g read pin        # Read pin state
+gpio -g mode pin out       # Set pin as output
+gpio -g write pin 1        # Set pin HIGH
+gpio -g write pin 0        # Set pin LOW
+gpio -g read pin           # Read pin state
 ```
 
 ## Power Tips
@@ -254,12 +254,12 @@ history          # Show command history
 
 ### Redirections
 ```bash
-command > file   # Output to file (overwrite)
-command >> file  # Output to file (append)
-command < file   # Input from file
-command1 | command2  # Pipe output to another command
-command &        # Run in background
-command1 && command2 # Run command2 if command1 succeeds
+command > file         # Output to file (overwrite)
+command >> file        # Output to file (append)
+command < file         # Input from file
+command1 | command2    # Pipe output to another command
+command &              # Run in background
+command1 && command2   # Run command2 if command1 succeeds
 ```
 
 ### Aliases
@@ -293,4 +293,3 @@ source ~/.bashrc
 5. Verify network commands
 6. Use `sudo` only when necessary
 7. Keep system updated regularly
-```
